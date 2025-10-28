@@ -4,7 +4,8 @@
 
 package frc.robot;
 
-
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -17,17 +18,23 @@ package frc.robot;
 public final class Constants {
   public static final class DriveConstants {
     // Drive motors - SparkMax Controller
-    public static final int DRIVE_LEFT_FRONT_MOTOR = 2;
-    public static final int DRIVE_LEFT_BACK_MOTOR = 4;
-    public static final int DRIVE_RIGHT_FRONT_MOTOR = 1;
-    public static final int DRIVE_RIGHT_BACK_MOTOR = 3;
-    public static final MotorType DRIVE_MOTOR_TYPE = MotorType.kBrushless;
+    public static final int kFrontLeftDriveCanId = 1;
+    public static final int kRearLeftDriveCanId = 3;
+    public static final int kFrontRightDriveCanId = 2;
+    public static final int kRearRightDriveCanId = 4;
+    public static final MotorType kDriveMotorType = MotorType.kBrushed;
     public static final double SPEED = .5;
-    public static final IdleMode DRIVE_IDLE_TYPE = IdleMode.kBrake;
-    public static final int DRIVE_CURRENT = 30;
-    public static double DRIVE_FACTOR = .5; // changed for turbo
-    public static double TURN_FACTOR = .5;
-    public static int DRIVE_REVERSE = 1; // Default drive; 1 = Front is panel, -1 = Front is intake
+    public static final IdleMode kDriveIdleMode = IdleMode.kBrake;
+    public static final int kDriveMotorCurrentLimit = 30;
+    public static double kDriveFactor = .5; // changed for turbo
+    public static double kTurnFactor = .5;
+    public static int kDriveReverse = 1; // Default drive; 1 = Front is panel, -1 = Front is intake
+  }
+
+  public static final class ShooterConstants {
+    // SparkMax Controllers
+    public static final int kLeftShooterCanId = 11;
+    public static final int kRightShooterCanId = 12;
   }
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;

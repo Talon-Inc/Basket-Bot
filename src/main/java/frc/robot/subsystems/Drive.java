@@ -7,19 +7,18 @@ package frc.robot.subsystems;
 import static frc.robot.Constants.DriveConstants.*;
 
 import com.revrobotics.spark.SparkMax;
-import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drive extends SubsystemBase {
-  private final SparkMax m_leftFrontDrive = new SparkMax(DRIVE_LEFT_FRONT_MOTOR, DRIVE_MOTOR_TYPE);
-  private final SparkMax m_leftBackDrive = new SparkMax(DRIVE_LEFT_BACK_MOTOR, DRIVE_MOTOR_TYPE);
+  private final SparkMax m_leftFrontDrive = new SparkMax(kFrontLeftDriveCanId, kDriveMotorType);
+  private final SparkMax m_leftRearDrive = new SparkMax(kRearLeftDriveCanId, kDriveMotorType);
 
-  private final SparkMax m_rightFrontDrive = new SparkMax(DRIVE_RIGHT_FRONT_MOTOR, DRIVE_MOTOR_TYPE);
-  private final SparkMax m_rightBackDrive = new SparkMax(DRIVE_RIGHT_BACK_MOTOR, DRIVE_MOTOR_TYPE);
+  private final SparkMax m_rightFrontDrive = new SparkMax(kFrontRightDriveCanId, kDriveMotorType);
+  private final SparkMax m_rightRearDrive = new SparkMax(kRearRightDriveCanId, kDriveMotorType);
  
   /** Creates a new Drive. */
   public Drive() {
-
+    
   }
 
   @Override
