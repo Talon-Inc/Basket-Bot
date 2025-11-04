@@ -23,7 +23,7 @@ public final class Constants {
     public static final int kFrontRightDriveCanId = 2;
     public static final int kRearRightDriveCanId = 4;
     public static final MotorType kDriveMotorType = MotorType.kBrushed;
-    public static final double SPEED = .5;
+    public static final double kSpeed = .5;
     public static final IdleMode kDriveIdleMode = IdleMode.kBrake;
     public static final int kDriveMotorCurrentLimit = 30;
     public static double kDriveFactor = .5; // changed for turbo
@@ -35,6 +35,7 @@ public final class Constants {
     // SparkMax Controllers
     public static final int kLeftShooterCanId = 11;
     public static final int kRightShooterCanId = 12;
+    public static final MotorType kShooterMotorType = MotorType.kBrushed;
   }
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
