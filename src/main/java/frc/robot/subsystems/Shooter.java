@@ -39,6 +39,11 @@ public class Shooter extends SubsystemBase {
         PersistMode.kPersistParameters);
   }
 
+  public void shoot() {
+    m_leftShooterMotor.set(1);
+    m_rightShooterMotor.set(1);
+  }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
