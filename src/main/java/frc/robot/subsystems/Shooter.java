@@ -43,6 +43,11 @@ public class Shooter extends SubsystemBase {
     m_leftShooterMotor.set(1);
     m_rightShooterMotor.set(1);
   }
+  
+  public void stop() {
+    m_leftShooterMotor.stopMotor();
+    m_rightShooterMotor.stopMotor();
+  }
 
   @Override
   public void periodic() {
