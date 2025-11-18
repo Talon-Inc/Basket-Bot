@@ -74,7 +74,8 @@ public final class Configs {
       leftShooter
           .idleMode(IdleMode.kBrake)
           .smartCurrentLimit(50)
-          .voltageCompensation(12);
+          .voltageCompensation(12)
+          .inverted(true);
       
       /*
        * Configure the closed loop controller. We want to make sure we set the
